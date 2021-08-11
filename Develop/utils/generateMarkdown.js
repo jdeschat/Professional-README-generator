@@ -33,7 +33,7 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ##License
+  ## License
   ${data.license}
 
   ## Badge
