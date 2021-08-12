@@ -57,19 +57,24 @@ function generateMarkdown(data) {
   ${renderLicenseSection(data.license)}
 
   ## Badge
-  ${data.badge}
+  ${data.badgeLanguages}
 
   ## Contributors
   ${data.contributing}
 
   ## Tests
   ${data.tests}
+  ![GitHub license](https://img.shields.io/badge/test-100%25-success)
 
   ## Questions
   ${data.questions}
   My Github username is ${data.githubUsername}, which can be accessed here ${data.githubLink}
 
-  You can reach me at 
+  You can reach me at ${data.email}.
+
+  Below are links to my demo video and the video location on my Github, respectfully:
+  - [Link to Demo Video](https://youtu.be/)
+  - [Video location in Github](https://github.com/jdeschat/potential-enigma/tree/main/assets)
 
 `;
 }
