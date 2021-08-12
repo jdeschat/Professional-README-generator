@@ -84,6 +84,7 @@ function generateMarkdown(data) {
 
   ## Contributors
   To contribute to ${data.repoName}, clone this repo locally and commit your code on a separate branch.
+  ${data.contributors}
 
   Contributors:
 
@@ -95,13 +96,14 @@ Made with [contributors-img](https://contrib.rocks).
 
   ## Tests
   ![GitHub license](https://img.shields.io/badge/test-100%25-success)
+  ${data.tests}
 
   ## Questions
   My Github username is ${data.username}, which can be accessed here ${data.githubLink}.
 
   The Github page for this project can be accessed using the following link: ${data.githubPages}.
 
-  You can reach me at ${data.email}.
+  You can reach me at ${data.email} with additional questions.
   
   Below are links to my demo video and the video location on my Github, respectfully:
   - [Link to Demo Video](https://youtu.be/)

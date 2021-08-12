@@ -104,7 +104,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide some information your usage:'
+        message: 'Provide some information about your usage:'
     },
     {
         type: 'confirm',
@@ -115,9 +115,19 @@ const questions = [
     {
         type: 'list',
         name: 'license',
-        message: 'Provide some information your license:',
+        message: 'Provide some information about your license:',
         choices: ['MIT', 'Apache 2.0', 'Mozilla Public License 2.0'],
         when: ({ confirmLicense }) => confirmLicense
+    },
+    {
+        type: 'input',
+        name: 'contributors',
+        message: 'Provide some information about how others can contribute to this project:'
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Provide some information about your tests:'
     },
 ];
 
