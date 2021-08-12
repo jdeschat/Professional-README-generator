@@ -26,7 +26,8 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== undefined) {
-    return `This application is rendered under ${license}`;
+    return `## License
+    This application is rendered under ${license}`;
   } else { return "" };
 
 }
