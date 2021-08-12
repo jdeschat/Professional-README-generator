@@ -20,6 +20,19 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'repoName',
+        message: 'Enter your Repository Name (Required)',
+        validate: repoName => {
+            if (repoName) {
+                return true;
+            } else {
+                console.log('Please enter your Github Repository Name!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
         name: 'githubLink',
         message: 'Enter your GitHub profile link (Required)',
         validate: githubLink => {
@@ -27,6 +40,19 @@ const questions = [
                 return true;
             } else {
                 console.log('Please enter your Github profile link!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'githubPages',
+        message: 'Enter your GitHub Pages link (Required)',
+        validate: githubPagesLink => {
+            if (githubPagesLink) {
+                return true;
+            } else {
+                console.log('Please enter your Github Pages link!');
                 return false;
             }
         }
@@ -70,7 +96,6 @@ const questions = [
             }
         }
     },
-    // Table of contents will go here
     {
         type: 'input',
         name: 'installation',
@@ -94,27 +119,6 @@ const questions = [
         choices: ['MIT', 'Apache 2.0', 'Mozilla Public License 2.0'],
         when: ({ confirmLicense }) => confirmLicense
     },
-    {
-        type: 'checkbox',
-        name: 'badgeLanguages',
-        message: 'What did you build this project with? (Check all that apply)',
-        choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
-    },
-    {
-        type: 'input',
-        name: 'contributors',
-        message: 'Provide some information about your contribution:',
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: 'Provide some information your tests:',
-    },
-    {
-        type: 'input',
-        name: 'questions',
-        message: 'Provide some questions for the contributors:',
-    }
 ];
 
 // TODO: Create a function to write README file
@@ -122,11 +126,9 @@ function writeToFile(fileName, data) {
     return fs.writeFileSync(fileName, data);
 }
 
-// TODO: Create a function to initialize app
+// Created a function to initialize app
 function init() {
     inquirer.prompt(questions).then(responses => {
-        // console.log(responses);
-        // console.log(generateMarkdown(responses));
         writeToFile("README.md", generateMarkdown(responses));
     })
 }

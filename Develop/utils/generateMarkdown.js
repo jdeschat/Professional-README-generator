@@ -1,4 +1,7 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Created a function that returns a license badge based on which license is passed in
+
+const inquirer = require("inquirer");
+
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   console.log(license);
@@ -11,7 +14,7 @@ function renderLicenseBadge(license) {
   } else { return "" };
 }
 
-// TODO: Create a function that returns the license link
+// Created a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== undefined) {
@@ -19,7 +22,7 @@ function renderLicenseLink(license) {
   } else { return "" };
 }
 
-// TODO: Create a function that returns the license section of README
+// Created a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== undefined) {
@@ -29,12 +32,14 @@ This application is rendered under ${license}`;
 
 }
 
-// TODO: Create a function to generate markdown for README
+// Created a function to generate markdown for README
 function generateMarkdown(data) {
   console.log(data);
   return `# ${data.title}
 
+  [![npm](https://badge.fury.io/js/inquirer.svg)](http://badge.fury.io/js/inquirer)
   ${renderLicenseBadge(data.license)}
+
   ## Description
   ${data.description}
 
@@ -43,39 +48,61 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   ${renderLicenseLink(data.license)}
-  - [Badge](#badge)
   - [Contributors](#contributors)
   - [Tests](#tests)
   - [Questions](#questions)
 
   ## Installation
+
   ${data.installation}
+
+  npm install inquirer
+
+  
+  var inquirer = require('inquirer');
+  inquirer
+    .prompt([
+      /* Pass your questions in here */
+    ])
+    .then((answers) => {
+      // Use user feedback for... whatever!!
+    })
+    .catch((error) => {
+      if (error.isTtyError) {
+        // Prompt couldn't be rendered in the current environment
+      } else {
+        // Something else went wrong
+      }
+    });
+ 
 
   ## Usage
   ${data.usage}
 
   ${renderLicenseSection(data.license)}
 
-  ## Badge
-  ${data.badgeLanguages}
-
   ## Contributors
-  ${data.contributing}
+  To contribute to ${data.repoName}, clone this repo locally and commit your code on a separate branch.
+
+  Contributors:
+<a href="https://github.com/${data.username}/${data.repoName}/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=${data.username}/${data.repoName}" />
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
 
   ## Tests
-  ${data.tests}
   ![GitHub license](https://img.shields.io/badge/test-100%25-success)
 
   ## Questions
-  ${data.questions}
-  My Github username is ${data.githubUsername}, which can be accessed here ${data.githubLink}
+  My Github username is ${data.githubUsername}, which can be accessed here ${data.githubLink}.
+  The Github page for this project can be accessed using the following link: ${data.githubPages}.
 
   You can reach me at ${data.email}.
 
   Below are links to my demo video and the video location on my Github, respectfully:
   - [Link to Demo Video](https://youtu.be/)
   - [Video location in Github](https://github.com/jdeschat/potential-enigma/tree/main/assets)
-
 `;
 }
 
