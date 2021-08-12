@@ -58,6 +58,7 @@ function generateMarkdown(data) {
 
   ${data.installation}
 
+  \`\`\`JavaScript
 
   npm install inquirer
 
@@ -76,7 +77,7 @@ function generateMarkdown(data) {
         // Something else went wrong
       }
     });
-
+ \`\`\`
  
   ## Usage
   ${data.usage}
