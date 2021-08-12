@@ -17,7 +17,7 @@
 
   ## Installation
 
-  To install this application, clone the code into your terminal for the respective repository. Then, install npm by entering the command “npm init” into the terminal. Inquirer must then be installed by entering “npm install inquirer”. Finally, the program can then be run by entering “node develop/index.js” into the command line, and answering each question appropriately.
+  To install this application, clone the code into your terminal for the respective repository. Then, install npm by entering the command ```npm init```  into the terminal. Inquirer must then be installed by entering ```npm install inquirer```. Finally, the program can then be run by entering ```node develop/index.js``` into the command line, and answering each question appropriately.
 
   ```JavaScript
 
@@ -41,9 +41,10 @@
  ```
  
   ## Usage
-  Inquirer is easiest to use when installed with npm:  ```JavaScript npm install inquirer ```. Then you can load the module into your code with a require call: ```JavaScript const inquirer = require(‘inquirer’); ```
+  Inquirer is easiest to use when installed with npm:  ``` npm install inquirer ```. Then you can load the module into your code with a require call: ``` const inquirer = require(‘inquirer’); ```
 
-  
+  ## License
+    This application is rendered under MIT
 
   ## Contributors
   To contribute to Professional-README-generator, clone this repo locally and commit your code on a separate branch.
@@ -60,13 +61,12 @@ Made with [contributors-img](https://contrib.rocks).
   ![GitHub license](https://img.shields.io/badge/test-100%25-success)
 
   ## Questions
-  My Github username is undefined, which can be accessed here https://github.com/jdeschat/Professional-README-generator.
+  My Github username is jdeschat, which can be accessed here https://github.com/jdeschat/Professional-README-generator.
 
   The Github page for this project can be accessed using the following link: https://jdeschat.github.io/Professional-README-generator/.
 
   You can reach me at jdeschat@gmail.com.
   
-  ![alt]https://github.com/jdeschat/Professional-README-generator/blob/main/assets/images/profile.jpg
   Below are links to my demo video and the video location on my Github, respectfully:
   - [Link to Demo Video](https://youtu.be/)
   - [Video location in Github](https://github.com/jdeschat/Professional-README-generator/tree/main/assets/video)
