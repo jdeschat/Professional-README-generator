@@ -7,6 +7,32 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub Username (Required)',
+        validate: githubUsername => {
+            if (githubUsername) {
+                return true;
+            } else {
+                console.log('Please enter your Github username!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub profile link (Required)',
+        validate: githubLink => {
+            if (githubLink) {
+                return true;
+            } else {
+                console.log('Please enter your Github profile link!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
         name: 'title',
         message: 'What is the title of your project? (Required)',
         validate: projectInput => {
@@ -63,9 +89,10 @@ const questions = [
         default: true
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'Provide some information your license:',
+        choices: ['MIT', 'Apache 2.0', 'Mozilla Public License 2.0'],
         when: ({ confirmLicense }) => confirmLicense
     },
     {
@@ -88,7 +115,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contributing',
+        name: 'contributors',
         message: 'Provide some information your contribution:',
         when: ({ confirmContributing }) => confirmContributing
     },
