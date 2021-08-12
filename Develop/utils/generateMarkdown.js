@@ -26,11 +26,8 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== undefined) {
-    return ``;
-  } else {
-    return
-
-  };
+    return `This application is rendered under ${license}`;
+  } else { return "" };
 
 }
 
@@ -99,13 +96,12 @@ Made with [contributors-img](https://contrib.rocks).
   ![GitHub license](https://img.shields.io/badge/test-100%25-success)
 
   ## Questions
-  My Github username is ${data.githubUsername}, which can be accessed here ${data.githubLink}.
+  My Github username is ${data.username}, which can be accessed here ${data.githubLink}.
 
   The Github page for this project can be accessed using the following link: ${data.githubPages}.
 
   You can reach me at ${data.email}.
   
-  ![alt]https://github.com/jdeschat/Professional-README-generator/blob/main/assets/images/profile.jpg
   Below are links to my demo video and the video location on my Github, respectfully:
   - [Link to Demo Video](https://youtu.be/)
   - [Video location in Github](https://github.com/jdeschat/Professional-README-generator/tree/main/assets/video)
