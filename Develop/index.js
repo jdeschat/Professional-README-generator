@@ -7,7 +7,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: 'input',
-        name: 'github',
+        name: 'username',
         message: 'Enter your GitHub Username (Required)',
         validate: githubUsername => {
             if (githubUsername) {
@@ -20,13 +20,26 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'github',
+        name: 'githubLink',
         message: 'Enter your GitHub profile link (Required)',
         validate: githubLink => {
             if (githubLink) {
                 return true;
             } else {
                 console.log('Please enter your Github profile link!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address (Required)',
+        validate: email => {
+            if (email) {
+                return true;
+            } else {
+                console.log('Please enter your email address!');
                 return false;
             }
         }
@@ -59,28 +72,14 @@ const questions = [
     },
     // Table of contents will go here
     {
-        type: 'confirm',
-        name: 'confirmInstallation',
-        message: 'Would you like to enter some information about your "Installation" section?',
-        default: true
-    },
-    {
         type: 'input',
         name: 'installation',
-        message: 'Provide some information your installation:',
-        when: ({ confirmInstallation }) => confirmInstallation
-    },
-    {
-        type: 'confirm',
-        name: 'confirmUsage',
-        message: 'Would you like to enter some information about your "Usage" section?',
-        default: true
+        message: 'Provide some information about your installation:'
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide some information your usage:',
-        when: ({ confirmUsage }) => confirmUsage
+        message: 'Provide some information your usage:'
     },
     {
         type: 'confirm',
@@ -96,52 +95,25 @@ const questions = [
         when: ({ confirmLicense }) => confirmLicense
     },
     {
-        type: 'confirm',
-        name: 'confirmBadge',
-        message: 'Would you like to enter some information about your "Badge" section?',
-        default: true
-    },
-    {
-        type: 'input',
-        name: 'badge',
-        message: 'Provide some information your badge:',
-        when: ({ confirmBadge }) => confirmBadge
-    },
-    {
-        type: 'confirm',
-        name: 'confirmContributing',
-        message: 'Would you like to enter some information about your "Contributing" section?',
-        default: true
+        type: 'checkbox',
+        name: 'badgeLanguages',
+        message: 'What did you build this project with? (Check all that apply)',
+        choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
     },
     {
         type: 'input',
         name: 'contributors',
-        message: 'Provide some information your contribution:',
-        when: ({ confirmContributing }) => confirmContributing
-    },
-    {
-        type: 'confirm',
-        name: 'confirmTests',
-        message: 'Would you like to enter some information about your "Tests" section?',
-        default: true
+        message: 'Provide some information about your contribution:',
     },
     {
         type: 'input',
         name: 'tests',
         message: 'Provide some information your tests:',
-        when: ({ confirmTests }) => confirmTests
-    },
-    {
-        type: 'confirm',
-        name: 'confirmQuestions',
-        message: 'Would you like to ask any questions to the contributors?',
-        default: true
     },
     {
         type: 'input',
         name: 'questions',
         message: 'Provide some questions for the contributors:',
-        when: ({ confirmQuestions }) => confirmQuestions
     }
 ];
 
