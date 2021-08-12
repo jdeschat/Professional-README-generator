@@ -26,9 +26,11 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== undefined) {
-    return `## License
-This application is rendered under ${license}`;
-  } else { return "" };
+    return ``;
+  } else {
+    return
+
+  };
 
 }
 
@@ -56,9 +58,9 @@ function generateMarkdown(data) {
 
   ${data.installation}
 
+
   npm install inquirer
 
-  
   var inquirer = require('inquirer');
   inquirer
     .prompt([
@@ -74,8 +76,8 @@ function generateMarkdown(data) {
         // Something else went wrong
       }
     });
- 
 
+ 
   ## Usage
   ${data.usage}
 
@@ -85,6 +87,7 @@ function generateMarkdown(data) {
   To contribute to ${data.repoName}, clone this repo locally and commit your code on a separate branch.
 
   Contributors:
+
 <a href="https://github.com/${data.username}/${data.repoName}/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=${data.username}/${data.repoName}" />
 </a>
@@ -96,13 +99,15 @@ Made with [contributors-img](https://contrib.rocks).
 
   ## Questions
   My Github username is ${data.githubUsername}, which can be accessed here ${data.githubLink}.
+
   The Github page for this project can be accessed using the following link: ${data.githubPages}.
 
   You can reach me at ${data.email}.
-
+  
+  ![alt]https://github.com/jdeschat/Professional-README-generator/blob/main/assets/images/profile.jpg
   Below are links to my demo video and the video location on my Github, respectfully:
   - [Link to Demo Video](https://youtu.be/)
-  - [Video location in Github](https://github.com/jdeschat/potential-enigma/tree/main/assets)
+  - [Video location in Github](https://github.com/jdeschat/Professional-README-generator/tree/main/assets/video)
 `;
 }
 
