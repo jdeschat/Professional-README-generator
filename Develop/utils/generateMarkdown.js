@@ -105,7 +105,7 @@ Made with [contributors-img](https://contrib.rocks).
   You can reach me at ${data.email} with additional questions.
   
   Below are links to my demo video and the video location on my Github, respectfully:
-  - [Link to Demo Video](https://youtu.be/)
+  - [Link to Demo Video](https://www.youtube.com/embed/8UzYSO5n4rc)
   - [Video location in Github](https://github.com/jdeschat/Professional-README-generator/tree/main/assets/video)
 `;
 }
