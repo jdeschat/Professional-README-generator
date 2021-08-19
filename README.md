@@ -48,6 +48,7 @@
 
   ## Contributors
   To contribute to Professional-README-generator, clone this repo locally and commit your code on a separate branch.
+  
 
   Contributors:
 
@@ -59,13 +60,14 @@ Made with [contributors-img](https://contrib.rocks).
 
   ## Tests
   ![GitHub license](https://img.shields.io/badge/test-100%25-success)
+   Go the extra mile and write tests for your application. Then provide examples on how to run them.
 
   ## Questions
   My Github username is jdeschat, which can be accessed here https://github.com/jdeschat/Professional-README-generator.
 
   The Github page for this project can be accessed using the following link: https://jdeschat.github.io/Professional-README-generator/.
 
-  You can reach me at jdeschat@gmail.com.
+  You can reach me at jdeschat@gmail.com with additional questions.
   
   Below are links to my demo video and the video location on my Github, respectfully:
   - [Link to Demo Video](https://youtu.be/)

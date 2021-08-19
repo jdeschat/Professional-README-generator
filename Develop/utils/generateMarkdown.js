@@ -1,5 +1,4 @@
 // Created a function that returns a license badge based on which license is passed in
-
 const inquirer = require("inquirer");
 
 // If there is no license, return an empty string
